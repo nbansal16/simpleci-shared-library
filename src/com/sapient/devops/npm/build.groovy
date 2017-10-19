@@ -28,7 +28,7 @@ def npmBuild()
 	     println "\u001B[32m[INFO] Building NPM modules, please wait..."
 		 if ( "${NPM_RUN}" == "null" ) {
 		   sh "npm install"
-		   sh "npm run docs:build"
+		   sh "npm run build"
 		 }
 		 else {
 		   sh """${NPM_RUN}"""
