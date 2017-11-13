@@ -16,8 +16,7 @@ def call(body) {
 
   try {
       def remoteExe = new remote()
-      remoteExe.setValue("${config.REMOTE_USER}", "${config.REMOTE_IP}", "${config.DEPLOY_PATH}", "${config.SCRIPT}","${config.SCRIPT_FILE_NAME}")
-      remoteExe.copyScriptFile()
+      remoteExe.setValue("${config.REMOTE_USER}", "${config.REMOTE_IP}", "${config.DEPLOY_PATH}", "${config.SCRIPT}")
       remoteExe.checkFile()
 	  remoteExe.runCommand()
   }
